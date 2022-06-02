@@ -14,5 +14,9 @@ function mytheme_setup() {
     register_nav_menu('secondary', 'Footer Navigation');
 }
 
-
 add_action('init', 'mytheme_setup');
+
+// he said you can add these theme supports here and not in the 'init' hook
+add_theme_support('custom-background');
+add_theme_support('custom-header');
+add_theme_support('post-thumbnails');
