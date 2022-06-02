@@ -6,3 +6,13 @@ function mytheme_script_enqueue() {
 }
 
 add_action('wp_enqueue_scripts', 'mytheme_script_enqueue');
+
+function mytheme_setup() {
+    add_theme_support('menus');
+
+    register_nav_menu('primary', 'Primary Header Navigation');
+    register_nav_menu('secondary', 'Footer Navigation');
+}
+
+
+add_action('init', 'mytheme_setup');
